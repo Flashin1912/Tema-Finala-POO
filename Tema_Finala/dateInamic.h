@@ -1,5 +1,5 @@
-#ifndef VECTOR2D_H
-#define VECTOR2D_H
+#ifndef DATEINAMIC_H
+#define DATEINAMIC_H
 
 template <typename X>
 class Date {

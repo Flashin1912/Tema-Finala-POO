@@ -1,12 +1,18 @@
 #ifndef MANAGER_H
 #define MANAGER_H
+#include "joc.h"
 
 class Manager 
 {
 private:
     static Manager* instance;
-
-    Manager() {}
+    std::unique_ptr<Joc> runda;
+    Manager() 
+    {
+        runda = std::make_unique<Joc>();
+        runda->start();
+        runda->lista();
+    }
 
 public:
     static Manager* getInstance() 
@@ -16,6 +22,5 @@ public:
         return instance;
     }
 };
-Manager* Manager::instance = 0;
 
 #endif
